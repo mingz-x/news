@@ -43,12 +43,12 @@ export default {
     },
     methods: {
         async openApiAll(){
-            const res = await axios.get(`http://localhost:4000/news?t=${this.content}`);
+            const res = await axios.get(`https://server-ten-dusky.vercel.app/news?t=${this.content}`);
             this.news = res.data.data
             this.tabActive = 'all';
         },
         async openApi(c){
-            const res = await axios.get(`http://localhost:4000/news/sec?t=${this.content}&s=${c}`);
+            const res = await axios.get(`https://server-ten-dusky.vercel.app/news/sec?t=${this.content}&s=${c}`);
             this.news = res.data.data
             this.tabActive = c;
         }
