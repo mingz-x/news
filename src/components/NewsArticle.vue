@@ -69,7 +69,7 @@ export default {
         width: 843px;
     }
     .btn{
-        margin: 15px;
+        margin-bottom: 15px;
         button{
             border: 0;
             background-color: white;
