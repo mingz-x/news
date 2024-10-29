@@ -34,7 +34,11 @@ export default {
                 { value: 'politics', label: '정치' },
                 { value: 'economy', label: '경제' },
                 { value: 'society', label: '사회' },
-                { value: 'culture', label: '문화' }
+                { value: 'culture', label: '문화' },
+                { value: 'world', label: '세계' },
+                { value: 'tech', label: '기술/IT' },
+                { value: 'entertainment', label: '연예' },
+                { value: 'opinion', label: '사설' }
             ]
         };
     },
@@ -68,8 +72,11 @@ export default {
         button{
             border: 0;
             background-color: white;
+            font-size: 20px;
             font-weight: bold;
             color: #2c3e50;
+            cursor: pointer;
+
             &.active {
                 color: #42b983;
             }
