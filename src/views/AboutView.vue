@@ -12,9 +12,6 @@ export default {
   components: {
     NewsArticle
   },
-  // created(){
-  //     this.openApi('global-articles')
-  // },
   methods: {
   }
 }
