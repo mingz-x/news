@@ -1,0 +1,34 @@
+<div class="btn">
+	<!-- 
+        category: news(국내기사)
+        정치: politics | 경제: economy | 사회: society | 문화: culture | 
+        세계: world | 기술/IT: tech | 연예: entertainment | 사설: opinion  
+        DocumentSearch(["news"],["politics"],"딥서치")
+    -->
+    <!-- @click="category" -->
+    <button
+    @click="openApiAll" 
+    :class="{active:tabActive == 'all'}">
+        전체
+    </button> |
+    <button
+    @click="openApi('politics')" 
+    :class="{active:tabActive  == 'politics'}">
+        정치
+    </button> |
+    <button
+    @click="openApi('economy')" 
+    :class="{active:tabActive == 'economy'}">
+        경제
+    </button> |
+    <button
+    @click="openApi('society')"
+    :class="{active:tabActive == 'society'}">
+        사회
+    </button> |
+    <button
+    @click="openApi('culture')"
+    :class="{active:tabActive == 'culture'}">
+        문화
+    </button>
+</div>

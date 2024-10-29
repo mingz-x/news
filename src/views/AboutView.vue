@@ -1,5 +1,26 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <NewsArticle content="global-articles"/>
   </div>
 </template>
+
+<script>
+import NewsArticle from '@/components/NewsArticle.vue';
+
+export default {
+  name: 'AboutView',
+  components: {
+    NewsArticle
+  },
+  // created(){
+  //     this.openApi('global-articles')
+  // },
+  methods: {
+  }
+}
+</script>
+
+
+<style lang="">
+  
+</style>
