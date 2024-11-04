@@ -1,5 +1,5 @@
 <template lang="">
-    <div class="news" v-if="news.length">
+    <div class="news" v-if="true">
         <div class="btn">
             <button 
             v-for="tab in tabs" :key="tab.value"
@@ -9,13 +9,17 @@
         </button>
         </div>
         <div class="newscard" v-for="(card, i) in news" :key="i">
-            <figure><img :src="card.thumbnail_url"/></figure>
-            <div class='txt'>
-                <p>{{ card.published_at }}</p>
-                <h3>{{ card.title }}</h3>
-                <p>{{ card.publisher }} {{ card.author }}</p>
-            </div>
-            <!-- {{ news }} -->
+            <a :href="card.content_url" target="_blank">
+                <figure><img :src="card.thumbnail_url || 'example.jpg'"/></figure>
+                <div class='txt'>
+                    <p>{{ card.published_at }}</p>
+                    <h3>{{ card.title }}</h3>
+                    <p>{{ card.publisher }} {{ card.author }}</p>
+                </div>
+            </a>
+        </div>
+        <div v-if="!news.length && tabActive === 'tech'">
+            <p>기술/IT 관련 뉴스가 없습니다.</p>
         </div>
     </div>
 </template>
@@ -90,10 +94,15 @@ export default {
         margin: 10px 0;
         padding: 10px;
         
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
         
+        a{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            text-decoration: none;
+            color: inherit;
+        }
         figure{
             margin: 0;
             width: 40%;
